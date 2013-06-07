@@ -99,6 +99,37 @@ lib.navigation.service-top {
 	}
 }
 
+#-------------------------------------------------------------------------------
+#	NAVIGATION: Navigation top right
+#-------------------------------------------------------------------------------
+lib.navigation.right = COA
+lib.navigation.right {
+
+	10 = HMENU
+	10 {
+		special = directory
+		special.value = {$plugin.theme_configuration.navigation.right}
+
+		1 = TMENU
+		1 {
+			noBlur = 1
+
+			NO = 1
+			NO {
+				wrapItemAndSub = <li>|</li>
+				ATagTitle.field = subtitle // title
+				stdWrap.htmlSpecialChars = 1
+			}
+
+			CUR <.NO
+			CUR {
+				wrapItemAndSub = <li class="active">|</li>
+				doNotLinkIt = 0
+			}
+		}
+	}
+}
+
 lib.navigation.service-top-right = COA
 lib.navigation.service-top-right {
 	10 = HMENU
@@ -299,10 +330,15 @@ lib.navigation.footer {
 
 			NO = 1
 			NO {
-				wrapItemAndSub = <li>|</li>
+				wrapItemAndSub = <li>|</li><li class="muted">&middot;</li> |*| <li>|</li><li class="muted">&middot;</li> |*| <li>|</li>
 				ATagTitle.field = subtitle // title
 				stdWrap.htmlSpecialChars = 1
 			}
+
+			ACT < .NO
+			ACT.wrapItemAndSub = <li class="active">|</li><li class="muted">&middot;</li> |*| <li class="active">|</li><li class="muted">&middot;</li> |*| <li class="active">|</li>
+
+			CUR < .ACT
 		}
 	}
 
@@ -342,5 +378,17 @@ lib.navigation.socialmedia {
 		stdWrap.typolink.parameter = http://twitter.com/
 		stdWrap.typolink.target = _blank
 		#stdWrap.typolink.ATagParams = onclick="_gaq.push(['_trackSocial', 'twitter', 'socialicon']);"
+	}
+}
+
+#-------------------------------------------------------------------------------
+#	NAVIGATION: Footer (right)
+#-------------------------------------------------------------------------------
+lib.navigation.footer.top = TEXT
+lib.navigation.footer.top {
+	wrap = |
+	data = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:toplink
+	typolink {
+		parameter.dataWrap = {getIndpEnv:TYPO3_REQUEST_URL}#top
 	}
 }

@@ -24,15 +24,15 @@ page {
 			key.override.field = backend_layout
 
 			default = TEXT
-			default.value = EXT:modernpackage/Resources/Private/Templates/content-2col-75-25.html
+			default.value = EXT:modernpackage/Resources/Private/Templates/default.html
 			1 = TEXT
-			1.value = EXT:modernpackage/Resources/Private/Templates/content-1col.html
-			3 = TEXT
-			3.value = EXT:modernpackage/Resources/Private/Templates/content-3col.html
-			4 = TEXT
-			4.value = EXT:modernpackage/Resources/Private/Templates/special-home.html
-			5 = TEXT
-			5.value = EXT:modernpackage/Resources/Private/Templates/content-2col-25-75.html
+			1.value = EXT:modernpackage/Resources/Private/Templates/gov_1col.html
+			#3 = TEXT
+			#3.value = EXT:modernpackage/Resources/Private/Templates/content-3col.html
+			#4 = TEXT
+			#4.value = EXT:modernpackage/Resources/Private/Templates/special-home.html
+			#5 = TEXT
+			#5.value = EXT:modernpackage/Resources/Private/Templates/content-2col-25-75.html
 		}
 		#partialRootPath = EXT:modernpackage/Resources/Private/Templates/
 		layoutRootPath = EXT:modernpackage/Resources/Private/Templates/Layouts/
@@ -43,44 +43,21 @@ page {
 
 	# CSS files to be included
 	includeCSS {
-		file1 = EXT:modernpackage/Resources/Public/Template/css/bootstrap.min.css
+		file1 = EXT:modernpackage/Resources/Public/Template/css/government.min.css
 		file1.media = screen,print
-		file2 = EXT:modernpackage/Resources/Public/Template/css/style.css
+		file2 = EXT:modernpackage/Resources/Public/Template/css/government-responsive.min.css
 		file2.media = screen,print
-		file3 = EXT:modernpackage/Resources/Public/Template/css/mediaqueries.css
-		file3.media = screen,print
-		file5 = EXT:modernpackage/Resources/Public/Template/css/flexslider.css
-		file5.media = screen,print
-		file6 = EXT:modernpackage/Resources/Public/Template/css/responsiveTable.css
-		file6.media = screen,print
-		file6 = EXT:modernpackage/Resources/Public/Template/css/yoxview.css
-		file6.media = screen,print
-		file8 = EXT:modernpackage/Resources/Public/Template/css/jquery-ui-1.10.3.custom.min.css
-		file8.media = screen,print
 	}
 
 	# JS files to be included
 	includeJSFooter {
-		bootstrap = EXT:modernpackage/Resources/Public/Template/js/bootstrap.min.js
-		flexslider = EXT:modernpackage/Resources/Public/Template/js/jquery.flexslider-min.js
-		yoxview = EXT:modernpackage/Resources/Public/Template/js/jquery.yoxview-2.21.min.js
-		placeholder = EXT:modernpackage/Resources/Public/Template/js/jquery.placeholder.min.js
-		responsive = EXT:modernpackage/Resources/Public/Template/js/respond.min.js
-		customjs = EXT:modernpackage/Resources/Public/Template/js/script.js
-	}
-
-	includeJS {
-		html5shiv = EXT:modernpackage/Resources/Public/Template/js/html5shiv.js
-		html5shiv {
-			allWrap = <!--[if lt IE 9]>|<![endif]-->
-			excludeFromConcatenation = 1
-			forceOnTop = 1
-		}
+		file1 = EXT:modernpackage/Resources/Public/Template/js/jquery.min.1.9.1.js
+		file2 = EXT:modernpackage/Resources/Public/Template/js/government.min.js
+		file3 = EXT:modernpackage/Resources/Public/Template/js/application.js
 	}
 
 	includeJSFooterlibs {
-		jQuery = EXT:modernpackage/Resources/Public/Template/js/jquery-1.9.1.js
-		jQueryUi = EXT:modernpackage/Resources/Public/Template/js/jquery-ui-1.10.3.custom.min.js
+	#jQuery = EXT:modernpackage/Resources/Public/Template/js/jquery.js
 	}
 
 

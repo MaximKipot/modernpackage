@@ -28,6 +28,12 @@ plugin.theme_configuration {
 			prefix = Modern Package -
 			suffix =
 		}
+
+		header.name = Sitestarter
+		footer {
+			address = Max Mustermann, Musterstr 123, 1234 Musterstadt, Email:
+			email = info@musterstadt.com
+		}
 	}
 
 	assets {
